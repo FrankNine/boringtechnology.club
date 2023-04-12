@@ -406,7 +406,9 @@
             </td>
             <td class="note">
               <a name="30"></a>
-              I chose “boring technology” as the pithy SEO-friendly title for this content, and I regret it most days. It’s kind of distracting. “Boring sounds bad, why is he saying it’s good?” Et cetera. It’s a real shitshow.<br /><br />But what I’m aiming for there is not technology that’s “boring” the way CSPAN is boring. I mean that it’s boring in the sense that it’s well understood. It’s bad, but you know why it’s bad. You can list all of the main ways it will let you down.
+               我用「選擇無聊的技術」這個簡單、SEO-friendly 的句子當作標題，現在我有些後悔。它有點誤導人。人們會想：「無聊聽起來蠻爛的，為什麼他說是好事？」之類的，情況變得很糟。
+               <br /><br />
+               但我說的「無聊的技術」不是像看 C-SPAN 電視台那種無聊，我指的無聊是已經被充分了解的事物。他可能爛，但你知道爛在哪裡。你能明確列出它可能讓你失望的地方。
               <a href="#30">#</a>
             </td>
           </tr>
@@ -417,7 +419,7 @@
             </td>
             <td class="note">
               <a name="31"></a>
-              So, ok, all you have to do is use Postgres, and you’re all set, right? Well, no. Unfortunately the combination of things that you choose also matters.
+              所以你的意思是資料庫就選 Postgres 就對了，是嗎？嗯，錯了。不幸的是你選擇出來的組合也有關係。
               <a href="#31">#</a>
             </td>
           </tr>
@@ -428,7 +430,7 @@
             </td>
             <td class="note">
               <a name="32"></a>
-              Let’s say that you’re already using this stack. You have Python, Memcached, MySQL, and Apache.
+              假設你已經選擇了這個 Stack，有 Python、Memcached、MySQL、跟 Apache。
               <a href="#32">#</a>
             </td>
           </tr>
@@ -439,7 +441,7 @@
             </td>
             <td class="note">
               <a name="33"></a>
-              Let’s say you have a new problem to solve. Do you think it makes sense to add Ruby to your existing stack?
+              現在有個新問題要解決。你覺得把 Ruby 加入現有的 Stack 合理嗎？
               <a href="#33">#</a>
             </td>
           </tr>
@@ -450,7 +452,9 @@
             </td>
             <td class="note">
               <a name="34"></a>
-              The intuition of nearly everyone with any seasoning on them at all is “uh, geez, probably not.” <br /><br />We know that the marginal utility of adding ruby isn’t going to outweigh the complexity hit we take by adding it. Python and Ruby are pretty much the same thing.
+              每個有經驗的人回答大概都是：「呃，天呀，不好吧。」
+              <br /><br />
+              我們知道加入 Ruby 的邊際效益不可能抵過它帶來的複雜度成長。Python 跟 Ruby 基本上腳色重複了。
               <a href="#34">#</a>
             </td>
           </tr>
@@ -461,7 +465,7 @@
             </td>
             <td class="note">
               <a name="35"></a>
-              Ok, so how about adding Redis? We already have MySQL and Memcached, but should we add Redis?
+              好，那 Redis 呢？我們已經有 MySQL 跟 Memcached，還要加 Redis 進來嗎？
               <a href="#35">#</a>
             </td>
           </tr>
@@ -472,7 +476,9 @@
             </td>
             <td class="note">
               <a name="36"></a>
-              In my experience it is about here where the wheels come off. People lose their shit and start beating their polyglot programmer drums. There’s something about the idea of adding a new database that has people storming the Bastille, saying “you can’t stop us from using the best tool for the job, man.”<br /> <br />And when people succumb to this instinct they tell themselves that they’re giving developers freedom. And sure, it is freedom, but it's a very narrow definition of what freedom is.
+              在我的經驗裡，這種情況就會開始變得混亂。人們開始起邱，鼓吹要當多語言開發者。想加入新的資料庫的人像是一群要衝進巴士底監獄的革命分子。喊著：「你不能阻止我們用最好的工具來工作」。
+              <br /><br />
+              當人們屈服於這種本能，他們會說這是給開發者「自由」來圓。當然這是種自由，但是是一種很狹隘的定義。
               <a href="#36">#</a>
             </td>
           </tr>
@@ -483,7 +489,7 @@
             </td>
             <td class="note">
               <a name="37"></a>
-              What are we actually doing? Let’s dig in.
+              我們到底在做什麼？來深入探究一下。
               <a href="#37">#</a>
             </td>
           </tr>
@@ -494,7 +500,7 @@
             </td>
             <td class="note">
               <a name="38"></a>
-              This is what we’re implicitly saying when we want to add a piece of semi-redundant technology. <br /><br />We’re saying that the new tech is going to make our work so much easier in the near term that this benefit outweighs the cost of dealing with that technology indefinitely into the future.
+              當我們想加入一個有點冗餘的技術，我們通常會說這個新技術帶來的立即好處會超過未來持續維護它的成本。
               <a href="#38">#</a>
             </td>
           </tr>
@@ -505,7 +511,7 @@
             </td>
             <td class="note">
               <a name="39"></a>
-              That’s not a very complicated premise. We can try to apply structured thinking to it.
+              這個假說的前提沒有很複雜，我們可以結構化思考去想它。
               <a href="#39">#</a>
             </td>
           </tr>
@@ -516,7 +522,7 @@
             </td>
             <td class="note">
               <a name="40"></a>
-              Backing up a bit, your job is what my friend Coda says, here. You’re supposed to be solving business problems with technology.
+              拉回來一點，你的工作像是我的朋友 Coda 說的，你的工作應該是用技術解決商業問題。
               <a href="#40">#</a>
             </td>
           </tr>
@@ -527,7 +533,9 @@
             </td>
             <td class="note">
               <a name="41"></a>
-              We’re in a field that allegedly has something to do with computer science, so we can pretend to be computer scientists for a minute here and model this situation as a bipartite graph. <br /><br />On the left side we have business problems, and on the right side we have technical solutions.
+              我們的領域跟電腦科學有點關係，可以假裝我們是電腦科學家一下，用二分圖來描述這種情況。
+              <br /><br />
+              左邊是商業問題，右邊是技術方案。
               <a href="#41">#</a>
             </td>
           </tr>
@@ -538,7 +546,7 @@
             </td>
             <td class="note">
               <a name="42"></a>
-              We have to try to connect all of the nodes on the left side so that our problems are solved. Adding an edge here is making a technology choice.
+              我們要試著把左邊的點都連到右邊某點，代表我們的商業問題都解決了。加上一條邊就代表是一個技術的抉擇。
               <a href="#42">#</a>
             </td>
           </tr>
@@ -549,7 +557,7 @@
             </td>
             <td class="note">
               <a name="43"></a>
-              Every choice has a maintenance cost, but we also get the benefit of the technology that we choose. We solve the problem, we have capacity for solving additional problems, whatever.
+              每個選擇都有維護成本，但我們也會受益於我們所選的技術。我們解決問題，然後有能力解決更多問題，大致這樣。
               <a href="#43">#</a>
             </td>
           </tr>
@@ -560,7 +568,7 @@
             </td>
             <td class="note">
               <a name="44"></a>
-              So we have a nonzero benefit, and a nonzero cost for every choice.
+              所以我們每個選擇都有好處也有成本。
               <a href="#44">#</a>
             </td>
           </tr>
@@ -571,7 +579,7 @@
             </td>
             <td class="note">
               <a name="45"></a>
-              When we add more than one edge, we can make a choice. We can use the same technology that we’ve already paid for …
+              當我們要加額外的邊時，我們可以選擇用已經支付了成本的技術…
               <a href="#45">#</a>
             </td>
           </tr>
@@ -582,6 +590,7 @@
             </td>
             <td class="note">
               <a name="46"></a>
+              
               Or we could pick a different piece of technology. We have to pay for that new tech, too, but maybe we get so much development velocity or endorphins that it’s worth it.
               <a href="#46">#</a>
             </td>
