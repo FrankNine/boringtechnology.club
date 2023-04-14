@@ -726,7 +726,7 @@
             </td>
             <td class="note">
               <a name="58"></a>
-              因此多語言持久性（Polyglot persistence）不是我們該尋求的自由，我真心希望 Martin Fowler 把他那篇該死的 <a href="https://martinfowler.com/bliki/">Bliki</a> 文章下架。
+              因此多語言持久性（Polyglot persistence）不是我們該尋求的自由，我真心希望 Martin Fowler 把他那篇該死的 <a href="https://martinfowler.com/bliki/PolyglotPersistence.html">Bliki</a> 文章下架。
               <br /><br />
               如果你讓個別團隊、或是個人自由地做局部的技術決策，以全局來看你是在傷害自己。
               <br /><br />
@@ -789,7 +789,9 @@
             </td>
             <td class="note">
               <a name="63"></a>
-              What that means is that if you want to build an activity feed with Memcached, you have to do a bunch of extra work. You have to cope with the possibility that Memcached has gotten rid of your data at the moment you want it. <br /><br />That creates a ton more work when it comes to writing the code to deliver the feature. But we weighed that against the persistent cost of operating a new kind of database, and decided that we’d bite the bullet and build the feature on Memcached.<br />
+              實際上的問題在你想要用 Memcached 建構活動訊息流，你有很多額外的工作要做。你得處理 Memcached 丟掉你想當下想要的資料的問題
+              <br /><br />
+              這樣要完成這個功能需要一堆額外的工作。但是我們衡量持續維護料庫的成本過後，決定牙一咬用 Memcached 建構這個功能。
               <a href="#63">#</a>
             </td>
           </tr>
@@ -800,7 +802,7 @@
             </td>
             <td class="note">
               <a name="64"></a>
-              Then we walked away. We didn’t do anything related to activity feeds for years after that. We barely even thought about it.
+              然後我們就去做別的事了，好幾年沒再碰過這個活動訊息流。甚至連想都很少想到它。
               <a href="#64">#</a>
             </td>
           </tr>
@@ -811,7 +813,9 @@
             </td>
             <td class="note">
               <a name="65"></a>
-              Then one day I said, “hey, I wonder how activity feeds is doing.” And I looked at it and was surprised to discover that in the time since we’d launched it, the usage had increased by a factor of 20. And as far as I could tell it was totally fine.<br /><br />The fact that 2,000% more people could be using activity feeds and we didn’t even have any idea that it was happening is certainly the greatest purely technical achievement of my career.
+              有天我想說：「嘿，我有點好奇活動訊息流現在怎樣了？」驚訝地發現從發佈到當時，使用率提高了二十倍。而且以我的認知，它運作起來完全正常。
+              <br /><br />
+              我覺得有 2,000% 的人在用活動訊息流，然後我們根本沒有注意到，是我職涯中最大的技術成就。
               <a href="#65">#</a>
             </td>
           </tr>
@@ -822,7 +826,7 @@
             </td>
             <td class="note">
               <a name="66"></a>
-              The reason it was possible was because we used the shared stack. There were people around whose job involved noticing that we needed more MySQL’s or cron boxes or whatever. And there were other people who had to go to the datacenter and plug in new machines. But they were doing that horizontal scaling because the site was growing holistically. Nobody doing this had any awareness of our lone feature.<br />
+              原因是因為我們用了共同的 Stack。有些負責處理 MySQL 跟 corn 機器的同事注意到我們需要更多資源，然後有人去資料中心接上更多台電腦。因為網站是全面地成長，所以它們做的是水平擴展（Horizontal scaling）。過程中沒有人注意到我們那個沒沒無聞的功能。
               <a href="#66">#</a>
             </td>
           </tr>
@@ -833,7 +837,7 @@
             </td>
             <td class="note">
               <a name="67"></a>
-              If we’d deployed Redis just for activity feeds, you can be sure that Redis would have become distressed at some point as the feature scaled up 20 times. And we would have had to go back and work on Redis just to keep activity feeds working.
+              如果我們只為了活動訊息流部屬 Redis，你可以想見某個時間點當需求成長二十倍時 Redis 會出大事。我們得要放下手邊工作回去自己處理 Redis 讓活動訊息流回復正常。
               <a href="#67">#</a>
             </td>
           </tr>
@@ -844,7 +848,9 @@
             </td>
             <td class="note">
               <a name="68"></a>
-              Or more likely, someone else would have had to do it. Our team didn’t exist at all a year later, we were all working on different things. <br /><br />Something I have noticed is that people like cleaning up my messes even less than they like cleaning up their own messes. So this would have gotten awkward and terrible for everyone.
+              更可能的是，每個倒楣鬼要替我們做。我們的團隊一年後就解散了，各奔東西。
+              <br /><br />
+              我知道大家寧可擦自己的屁股，也不想幫我擦我的屁股。所以如果發生 Redis 的問題的話會讓大家感到糟糕與尷尬。
               <a href="#68">#</a>
             </td>
           </tr>
@@ -855,7 +861,9 @@
             </td>
             <td class="note">
               <a name="69"></a>
-              So I’m making a case here that you should tend to prefer mature things, and you should try not to use too many things.<br /><br />But it’s not an absolute principle. Obviously sometimes it does make sense to add new technology to your stack. And it can even make sense to use a weird new thing. <br />
+              我提這個故事是想說你應該偏好成熟的東西，然後盡量不要用太多東西。
+              <br /><br />
+              但這不是一個絕對的原則。顯然有時加新技術到你的 Stack 是合理的，甚至有時用又新又怪的東西也可能是合理的。
               <a href="#69">#</a>
             </td>
           </tr>
@@ -866,7 +874,7 @@
             </td>
             <td class="note">
               <a name="70"></a>
-              So I wanted to talk a bit about how you might go about doing that.
+              所以我想談一下遇到這種狀況該怎麼下手。
               <a href="#70">#</a>
             </td>
           </tr>
@@ -877,7 +885,11 @@
             </td>
             <td class="note">
               <a name="71"></a>
-              The long and short of it is that you have to talk to each other. <br /><br />Technology has global effects on your company, it isn’t something that should be left to individual engineers. You have to figure out a way to make adding technology a conversation.<br /><br />This might be underwhelming if you were expecting a big insightful secret here, but trust me, this is beyond many technology organizations. <br />
+              總而言之還是回到溝通
+              <br /><br />
+              技術對你的公司有著全面的影響，這不是該讓個別工程師決定的事。你要用溝通找出加入新技術的方法。
+              <br /><br />
+              你可能覺得這個答案蠻老調重彈的，但相信我，很多組織都還是做不到這一點。
               <a href="#71">#</a>
             </td>
           </tr>
@@ -888,7 +900,9 @@
             </td>
             <td class="note">
               <a name="72"></a>
-              Let’s say you’ve succeeded in gatekeeping new pieces of technology with a conversation. <br /><br />An excellent first question in such a conversation is: “how would we solve the problem at hand without adding anything new?”
+              假設你成功地透過溝通將一款新技術拉回到要先討論再看要不要加入。
+              <br /><br />
+              第一個好問題是：「如果我們要解決這個問題而不用新技術要怎麼做？」
               <a href="#72">#</a>
             </td>
           </tr>
@@ -899,7 +913,7 @@
             </td>
             <td class="note">
               <a name="73"></a>
-              This is a great question to ask because it immediately identifies the situation in which the problem is that we’d like to use a new piece of technology. “Um the problem is that we don’t use Cassandra but maybe we could.” That kind of thing. If you identify this situation, that’s great, because you can immediately stop talking about it.<br /><br />
+              這是個好問題，因為我們能立刻抓到想要用新技術槌子解決問題釘子的情境。像是：「呃，問題在我們沒有 Cassandra，也許我們該用。」這這種回答。如果你發現這種情況，討論大致上就可以結束了。
               <a href="#73">#</a>
             </td>
           </tr>
@@ -910,7 +924,9 @@
             </td>
             <td class="note">
               <a name="74"></a>
-              But anyway, assuming that you have a real problem, the answer is rarely that you can’t do it. If you have a functioning service of any complexity in production already, and you think you can’t accomplish a specific new feature with what you’ve already have, you’re probably just not thinking hard enough. <br /><br />You may need to resort to unnatural acts, but you can get pretty far with a minimal stack.
+              假設你遇到一個很難的問題，問題鮮少是你做不到。如果你有個已經在上線環境的複雜服務，然後你覺得某個特定問題非得引入新技術，我覺得問題是你想的不夠用力。
+              <br /><br />
+              你可能要在舊環境上做些不太自然的事，但是你其實能在最小的 Stack 上走很遠很久。
               <a href="#74">#</a>
             </td>
           </tr>
@@ -921,7 +937,9 @@
             </td>
             <td class="note">
               <a name="75"></a>
-              It’s really worthwhile to actually write down what all of the awkward things you’d have to do are. A lot of the time when you do this, you realize that the situation isn’t really that bad. Or it may be bad, but not as bad as the task of operationalizing a new thing. <br /><br />But it can go the other way, too. You can list all of the unnatural acts and conclude that adding a new thing will be worth it.
+              列下用既有技術在舊環境上要做什麼不自然的事會很有幫助。很多時候你條列了，會發現事情其實沒有那麼糟。或者是跟維護新東西比起來還是比較好。
+              <br /><br />
+              也有可能真的是採用新技術比較好，這樣你也有證實這個結論的參考。
               <a href="#75">#</a>
             </td>
           </tr>
@@ -932,7 +950,7 @@
             </td>
             <td class="note">
               <a name="76"></a>
-              And if you decide to try out a new piece of technology, you should figure out low-risk ways to get started. Your tactic should not be to rewrite your entire application with it in one step. You should be proving the technology in production with minimal risk, and then gradually gaining confidence in it.
+              如果你要採用新技術，應該要盡量用低風險的方式開始。你的策略不該是一步登天地把整個應用一次改寫完。你應該在上線環境用最低風顯的方式實證其價值，然後漸漸取得大家的信心。
               <a href="#76">#</a>
             </td>
           </tr>
@@ -943,7 +961,9 @@
             </td>
             <td class="note">
               <a name="77"></a>
-              If you’re adding a redundant piece of technology, your goal is to replace something with it. Your goal shouldn’t be to operate two pieces of technology that are redundant with one another forever. <br /><br />When you add a thing that replaces another thing, you should be committing to a plan to replace the old thing. It might be a long term plan. And you should be committing to rewriting the new thing using the old tools if the new tools don’t actually work out.
+              如果你要加入的是會造成冗餘的技術，你的最終目標該是替換到沒有冗餘，不應該同時操作兩個相互冗餘得技術下去。
+              <br /><br />
+              當你加入一個東西取代原有的東西，你應該堅持把舊東西徹底拿掉。這也許會是個長遠的計畫。如果新的工具最終證實沒有用，那也要把所有新的程式用舊的工具重寫。
               <a href="#77">#</a>
             </td>
           </tr>
@@ -954,7 +974,7 @@
             </td>
             <td class="note">
               <a name="78"></a>
-              So, in closing
+              現在來做個收尾
               <a href="#78">#</a>
             </td>
           </tr>
