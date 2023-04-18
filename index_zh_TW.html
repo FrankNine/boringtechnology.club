@@ -6,7 +6,14 @@
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, height=device-height, initial-scale=1" name="viewport">
-  </head>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap');
+      p {font-family: 'Noto Sans TC', sans-serif;}
+      td {font-family: 'Noto Sans TC', sans-serif;
+          line-height: 1.2}
+      
+    </style>
+    </head>
   <body>
     <h3 class="club-index"><a href="http://dotclub.club">The .club Club</a></h3>
 
@@ -118,7 +125,7 @@
             </td>
             <td class="note">
               <a name="7"></a>
-              另一個我關心的問題是：要怎麼讓開發者快樂？我是開發者，覺得這個問題很重要。如果可以的話我希望快樂地工作。
+              另一個我關心的問題是：「要怎麼讓開發者快樂？」我是開發者，覺得這個問題很重要。如果可以的話我希望快樂地工作。
               <a href="#7">#</a>
             </td>
           </tr>
@@ -246,7 +253,7 @@
             </td>
             <td class="note">
               <a name="17"></a>
-              我喜歡這樣來思考。咱們假設我們只有有限的創新點數（Innovation tokens）可以花費。這個點數是我虛構出來的東西，然後我下週要 ICO 這玩意兒。
+              我喜歡這樣來思考。咱們假設我們只有有限的創新點數（Innovation token）可以花費。這個點數是我虛構出來的東西，然後我下週要 ICO 這玩意兒。
               <br /><br />
               它代表我們對需要創意、詭異的、或是困難的事物的有限處理能力。我們真的沒有多少點數好花。在公司草創期，可能大概就只有三個點數，不會多太多。
               <a href="#17">#</a>
@@ -333,7 +340,7 @@
             </td>
             <td class="note">
               <a name="24"></a>
-              我討厭 <a href="https://zh.wikipedia.org/wiki/%E5%94%90%E7%BA%B3%E5%BE%B7%C2%B7%E6%8B%89%E5%A7%86%E6%96%AF%E8%8F%B2%E5%B0%94%E5%BE%B7">Donald Rumsfeld</a>，我希望他下油鍋。但他跟接下來要講的理論息息相關，所以我覺得有必要提他有多壞，讓我跟他保持點距離。
+              我討厭 <a href="https://zh.wikipedia.org/wiki/%E5%94%90%E7%BA%B3%E5%BE%B7%C2%B7%E6%8B%89%E5%A7%86%E6%96%AF%E8%8F%B2%E5%B0%94%E5%BE%B7">Donald Rumsfeld</a>，希望他下油鍋。但他跟接下來要講的理論息息相關，所以我覺得有必要提他有多壞，讓我跟他保持點距離。
               <a href="#24">#</a>
             </td>
           </tr>
@@ -475,7 +482,7 @@
             </td>
             <td class="note">
               <a name="36"></a>
-              在我的經驗裡，這種情況就會開始變得混亂。人們開始起邱，鼓吹要當多語言開發者。想加入新的資料庫的人像是一群要衝進巴士底監獄的革命分子。喊著：「你不能阻止我們用最好的工具來工作！」
+              在我的經驗裡，這種情況就會開始變得混亂。人們開始起邱，鼓吹要當多語言開發者。想加入新的資料庫的人像是一群要衝進巴士底監獄的革命分子。喊著：「你不能阻止我們用最好的工具來開發！」
               <br /><br />
               當人們屈服於這種躁動的本能，他們會說這是給開發者「自由」來圓。當然這是種自由，但是是一種很狹隘的定義。
               <a href="#36">#</a>
@@ -510,7 +517,7 @@
             </td>
             <td class="note">
               <a name="39"></a>
-              這個假說的前提沒有很複雜，我們可以結構化思考去想它。
+              這個假說的前提沒有很複雜，我們可以以結構化思考去想它。
               <a href="#39">#</a>
             </td>
           </tr>
@@ -657,7 +664,7 @@
             </td>
             <td class="note">
               <a name="52"></a>
-              當技術帶來的包袱很大的時候，這是我們該採取的策略。
+              當加入技術帶來的包袱很大的時候，這是我們該採取的策略。
               <a href="#52">#</a>
             </td>
           </tr>
@@ -753,7 +760,7 @@
               <a name="60"></a>
               從我的過往找到的好例子是 Etsy 的 Activity feeds。
               <br /><br />
-              Twitter 是／曾是一個 Activity feeds，Facebook 的動態消息也是。Etsy 許多年來都在花 VC 的資金，我猜碰巧他們也想要一個像 Twitter 還是 Facebook 的活動訊息流。
+              Twitter 是／曾是一個 Activity feeds，Facebook 的動態消息也是。Etsy 許多年來都在花 VC 的資金，我猜碰巧他們也想要一個像 Twitter 還是 Facebook 的 Activity feeds。
               <br /><br />
               我跟一個小團隊在 2010 開發了這個東西，過程還蠻有趣的。
               <a href="#60">#</a>
@@ -777,7 +784,7 @@
             </td>
             <td class="note">
               <a name="62"></a>
-              但我們要開發 Activity feeds 時，沒有 Redis 但有 Memcached。它們 API 都有點像是塞一坨 Blob 跟取出一坨 Blob，但它們做的保證相當不同。對我們最重要的差異在 Redis 有持久性（Persistent），Memcached 沒有持久性。
+              但我們要開發 Activity feeds 時，沒有 Redis 只有 Memcached。它們 API 都有點像是塞一坨 Blob 跟取出一坨 Blob，但它們做的保證相當不同。對我們最重要的差異在 Redis 有持久性（Persistent），而Memcached 沒有持久性。
               <a href="#62">#</a>
             </td>
           </tr>
@@ -790,7 +797,7 @@
               <a name="63"></a>
               實際上的問題在你想要用 Memcached 建構 Activity feeds，你有很多額外的工作要做。你得處理 Memcached 丟掉你想當下想要的資料的問題。
               <br /><br />
-              要這樣完成這個功能需要一堆額外的工作。但是我們衡量持續維護料庫的成本過後，決定牙一咬用 Memcached 建構這個功能。
+              要這樣完成這個功能需要一堆額外的工作。但是我們衡量持續維護新料庫的成本過後，決定牙一咬用 Memcached 建構這個功能。
               <a href="#63">#</a>
             </td>
           </tr>
@@ -814,7 +821,7 @@
               <a name="65"></a>
               有天我想說：「嘿，我有點好奇 Activity feeds 現在怎樣了？」驚訝地發現從發佈到當時，使用率提高了二十倍。而且以我的認知，它運作起來完全正常。
               <br /><br />
-              我覺得多了 2,000% 的人在用 Activity feeds，然後我們根本沒有發現到，是我職涯中最大的技術成就。
+              我覺得多了 2000% 的人在用 Activity feeds，然後我們根本沒有發現到，是我職涯中最大的技術成就。
               <a href="#65">#</a>
             </td>
           </tr>
@@ -825,7 +832,7 @@
             </td>
             <td class="note">
               <a name="66"></a>
-              原因是因為我們用了共同的 Stack。有些負責處理 MySQL 跟 corn 機器的同事注意到我們需要更多資源，然後有人去資料中心接上更多台電腦。因為網站是全面地成長，所以它們做的是水平擴展（Horizontal scaling）。過程中沒有人注意到我們那個沒沒無聞的功能。
+              原因是因為我們用了共同的 Stack。有些負責處理 MySQL 跟 corn 機器的同事注意到我們需要更多資源，然後有人去資料中心接上更多台電腦。因為網站是全面地成長，所以它們做的是水平擴充（Horizontal scaling）。過程中沒有人注意到我們那個沒沒無聞的功能。
               <a href="#66">#</a>
             </td>
           </tr>
@@ -912,7 +919,7 @@
             </td>
             <td class="note">
               <a name="73"></a>
-              這是個好問題，因為我們能立刻抓到想要用新技術槌子解決問題釘子的情境。像是：「呃，問題在我們沒有 Cassandra，也許我們該用。」這種回答。如果你發現這種情況，討論大致上就可以結束了。
+              這是個好問題，因為我們能立刻抓到想要用新技術槌子解決問題釘子的情境。像是：「呃，問題在我們沒有 Cassandra，也許我們該用。」這種回答。如果你發現這種情況，討論大致上就可以打住了。
               <a href="#73">#</a>
             </td>
           </tr>
@@ -1056,7 +1063,7 @@
             </td>
             <td class="note">
               <a name="85"></a>
-              如果你這樣下去就會錯過曲線上我們稱之為「精通」的部分，是這張曲線圖靠右的狀態。雖然還是有些問題，用起來感覺糟但還在可控範圍內。
+              如果你這樣下去就會錯過曲線上我們稱之為「精通」的部分，是這張曲線圖靠右的狀態。雖然還是有些問題，用起來感覺依然糟但還在可控範圍內。
               <br /><br />
               軟體工程的殘酷悖論是你可能該用你最討厭的工具。因為你會恨它是來自於你最了解它。
               <a href="#85">#</a>
@@ -1091,7 +1098,7 @@
             </td>
             <td class="note">
               <a name="88"></a>
-              幸福來自於推出產品、功能。
+              快樂來自於推出產品、功能。
               <a href="#88">#</a>
             </td>
           </tr>
